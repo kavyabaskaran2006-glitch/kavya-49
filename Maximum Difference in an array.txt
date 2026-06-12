@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.lang.System;
+class MaxDifference{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n;
+        System.out.println("Enter the size of an array:");
+        n=sc.nextInt();
+        int[] arr=new int[n];
+        System.out.println("Enter "+n+" array elements:");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int cd=0,md=0;
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                if(arr[j]>arr[i]){
+                    cd=arr[j]-arr[i];
+                }
+                if(cd>md){
+                    md=cd;
+                }
+            }
+        }
+        System.out.println("Max Difference:"+md);
+    }
+}
