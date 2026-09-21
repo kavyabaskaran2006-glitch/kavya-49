@@ -1,0 +1,48 @@
+import java.util.*;
+
+public class shoppingCart {
+    public static void main(String[] args) {
+
+        ArrayList<String> cart = new ArrayList<>();
+
+        // Add products
+        cart.add("Laptop");
+        cart.add("Mobile");
+        cart.add("Headphones");
+        cart.add("Keyboard");
+
+        System.out.println("Products added successfully.");
+
+        // Display products
+        System.out.println("\nProducts in cart:");
+        for (String product : cart) {
+            System.out.println(product);
+        }
+
+        // Search product
+        String search = "Mobile";
+
+        if (cart.contains(search)) {
+            System.out.println("\n" + search + " is available in the cart.");
+        } else {
+            System.out.println("\n" + search + " is not available.");
+        }
+
+        // Remove product
+        String remove = "Keyboard";
+
+        if (cart.remove(remove)) {
+            System.out.println("\n" + remove + " removed successfully.");
+        } else {
+            System.out.println("\n" + remove + " not found.");
+        }
+
+        // Sort products
+        Collections.sort(cart);
+
+        System.out.println("\nProducts after sorting:");
+        for (String product : cart) {
+            System.out.println(product);
+        }
+    }
+}

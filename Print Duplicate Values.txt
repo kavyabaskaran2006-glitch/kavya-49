@@ -1,0 +1,14 @@
+import java.util.*;
+public class DuplicateValues{
+    public static void main(String[] args){
+        int[] arr={10,20,10,30,20,40};
+        HashSet<Integer>Seen = new HashSet<>();
+        HashSet<Integer>duplicate=new HashSet<>();
+        for(int numbers:arr){
+            if(!Seen.add(numbers)){
+                duplicate.add(numbers);
+            }
+        }
+        System.out.println("Duplicates:"+duplicate);
+    }
+}

@@ -1,0 +1,11 @@
+import java.util.*;
+class uniqueElementCount{
+    public static void main(String[] args){
+        int[] arr={10,20,50,10,40,20,10};
+        HashSet<Integer>s=new HashSet<>();
+        for(int i=0;i<arr.length;i++){
+            s.add(arr[i]);
+        }
+        System.out.println(s.size());
+    }
+}

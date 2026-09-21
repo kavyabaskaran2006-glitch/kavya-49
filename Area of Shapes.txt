@@ -1,0 +1,45 @@
+public class shape{
+    public static void main(String[] args){
+        shap c=new circle(5);
+        c.calculateArea();
+        shap r=new rectangle(4,6);
+        r.calculateArea();
+        shap t=new triangle(3,8);
+        t.calculateArea();
+    }
+}
+abstract class shap{
+    abstract void calculateArea();
+}
+class circle extends shap{
+    double radius;
+    circle(double radius){
+        this.radius=radius;
+    }
+    void calculateArea(){
+        double area=Math.PI*radius*radius;
+        System.out.println("Area of Circle:"+area);
+    }
+}
+class rectangle extends shap{
+    double length,width;
+    rectangle(double length,double width){
+        this.length=length;
+        this.width=width;
+    }
+    void calculateArea(){
+        double area=length*width;
+        System.out.println("Area of Rectangle:"+area);
+    }
+}
+class triangle extends shap{
+    double base,heigth;
+    triangle(double base,double heigth){
+        this.base=base;
+        this.heigth=heigth;
+    }
+    void calculateArea(){
+        double area=0.5*base*heigth;
+        System.out.println("Area of Triangle:"+area);
+    }
+}
